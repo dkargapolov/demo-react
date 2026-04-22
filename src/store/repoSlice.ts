@@ -14,11 +14,11 @@ interface FetchContributorsResponse {
 
 export const fetchContributors = createAsyncThunk<
   FetchContributorsResponse,
-  FetchContributorsParams,
+  Pick<FetchContributorsParams, "owner" | "repo">,
   { rejectValue: string }
 >(
   "repoData/fetchContributors",
-  async ({ owner, repo, login, blacklist }, { rejectWithValue }) => {
+  async ({ owner, repo }, { rejectWithValue }) => {
     try {
       const response = await fetch(
         `https://api.github.com/repos/${owner}/${repo}/contributors?per_page=100`

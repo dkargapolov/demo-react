@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 
 import repoReducer from "./repoSlice";
 import settingsReducer from "./settingsSlice";
-import { errorHandlingMiddleware, loggingMiddleware } from "./middleware";
+import { errorHandlingMiddleware } from "./middleware";
 
 export const store = configureStore({
   reducer: {

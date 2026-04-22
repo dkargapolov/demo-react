@@ -105,7 +105,6 @@ export const FindReviewer = () => {
       let candidateIndex = 0;
       const animationDuration = 2000;
       const intervalTime = 100;
-      const iterations = animationDuration / intervalTime;
 
       const animationInterval = setInterval(() => {
         setCurrentCandidate(
