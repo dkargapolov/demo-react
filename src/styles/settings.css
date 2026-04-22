@@ -1,0 +1,67 @@
+.settings {
+}
+
+.settings__button {
+  padding: 10px 20px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.settings__button:hover {
+  background-color: #0052a3;
+}
+
+.settings__content {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.settings__field {
+  margin-bottom: 15px;
+}
+
+.settings__field--last {
+  margin-bottom: 10px;
+}
+
+.settings__label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.settings__input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.settings__input:focus {
+  outline: 2px solid #0066cc;
+  outline-offset: -1px;
+}
+
+.settings__input--error {
+  border: 2px solid #dc3545;
+}
+
+.settings__error {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.settings__error-icon {
+}

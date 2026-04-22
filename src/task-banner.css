@@ -1,9 +1,0 @@
-.task-banner {
-  background: green;
-  color: white;
-  width: 250px;
-  overflow: "hidden";
-  transition-duration: 400ms;
-  transition-property: height;
-  transition-timing-function: ease-in-out;
-}

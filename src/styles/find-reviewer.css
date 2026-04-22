@@ -1,0 +1,309 @@
+@keyframes findReviewer__icon--spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes findReviewer__avatar--pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes findReviewer__candidate--fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes findReviewer__reviewer--slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.find-reviewer {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.find-reviewer__info {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+}
+
+.find-reviewer__info-text {
+  margin: 0 0 5px 0;
+}
+
+.find-reviewer__info-text strong {
+}
+
+.find-reviewer__info-text--strong {
+}
+
+.find-reviewer__button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.find-reviewer__button:hover {
+  background-color: #0052a3;
+}
+
+.find-reviewer__button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.find-reviewer__spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: findReviewer__icon--spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.find-reviewer__error {
+  margin-top: 15px;
+  padding: 15px 20px;
+  border: 2px solid;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.find-reviewer__error--notFound {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+}
+
+.find-reviewer__error--rateLimit {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+}
+
+.find-reviewer__error--noCandidates {
+  background-color: #d1ecf1;
+  border-color: #17a2b8;
+}
+
+.find-reviewer__error--validation {
+  background-color: #fff3cd;
+  border-color: #ffc107;
+}
+
+.find-reviewer__error--network {
+  background-color: #f8d7da;
+  border-color: #dc3545;
+}
+
+.find-reviewer__error--unknown {
+  background-color: #e2e3e5;
+  border-color: #6c757d;
+}
+
+.find-reviewer__error--notFound .find-reviewer__error-title,
+.find-reviewer__error--notFound .find-reviewer__error-message,
+.find-reviewer__error--notFound .find-reviewer__error-hint {
+  color: #856404;
+}
+
+.find-reviewer__error--rateLimit .find-reviewer__error-title,
+.find-reviewer__error--rateLimit .find-reviewer__error-message,
+.find-reviewer__error--rateLimit .find-reviewer__error-hint {
+  color: #721c24;
+}
+
+.find-reviewer__error--noCandidates .find-reviewer__error-title,
+.find-reviewer__error--noCandidates .find-reviewer__error-message,
+.find-reviewer__error--noCandidates .find-reviewer__error-hint {
+  color: #0c5460;
+}
+
+.find-reviewer__error--validation .find-reviewer__error-title,
+.find-reviewer__error--validation .find-reviewer__error-message,
+.find-reviewer__error--validation .find-reviewer__error-hint {
+  color: #856404;
+}
+
+.find-reviewer__error--network .find-reviewer__error-title,
+.find-reviewer__error--network .find-reviewer__error-message,
+.find-reviewer__error--network .find-reviewer__error-hint {
+  color: #721c24;
+}
+
+.find-reviewer__error--unknown .find-reviewer__error-title,
+.find-reviewer__error--unknown .find-reviewer__error-message,
+.find-reviewer__error--unknown .find-reviewer__error-hint {
+  color: #383d41;
+}
+
+.find-reviewer__error-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.find-reviewer__error-icon {
+  font-size: 24px;
+}
+
+.find-reviewer__error-body {
+  flex: 1;
+}
+
+.find-reviewer__error-title {
+  margin: 0;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.find-reviewer__error-message {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.find-reviewer__error-hint {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+}
+
+.find-reviewer__candidate {
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid #3498db;
+  border-radius: 10px;
+  background-color: #ebf5fb;
+  text-align: center;
+  animation: findReviewer__candidate--fadeIn 0.3s ease-in-out;
+}
+
+.find-reviewer__candidate-text {
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.find-reviewer__candidate-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.find-reviewer__candidate-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  animation: findReviewer__avatar--pulse 0.5s ease-in-out infinite;
+}
+
+.find-reviewer__candidate-details {
+}
+
+.find-reviewer__candidate-name {
+  font-size: 20px;
+  color: #2c3e50;
+}
+
+.find-reviewer__candidate-number {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.find-reviewer__reviewer {
+  margin-top: 20px;
+  padding: 25px;
+  border: 3px solid #4caf50;
+  border-radius: 12px;
+  background-color: #e8f5e9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: findReviewer__reviewer--slideIn 0.5s ease-out;
+}
+
+.find-reviewer__reviewer-title {
+  margin: 0 0 20px 0;
+  color: #2e7d32;
+}
+
+.find-reviewer__reviewer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.find-reviewer__reviewer-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.find-reviewer__reviewer-details {
+}
+
+.find-reviewer__reviewer-name {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.find-reviewer__reviewer-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.find-reviewer__reviewer-link:hover {
+  background-color: #0052a3;
+}
+
+.find-reviewer__current-user {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.find-reviewer__current-user-text strong {
+}
